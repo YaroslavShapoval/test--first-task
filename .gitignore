@@ -4,6 +4,5 @@
 /log/*
 !/log/.keep
 /tmp
-Gemfile.lock
 db/schema.rb
 config/secrets.yml
