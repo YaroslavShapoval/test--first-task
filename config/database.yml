@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: test_task_dev
+  username: shapoval
+  password: rails321
+
+test:
+  <<: *default
+  database: test_task_test
+  username: shapoval
+  password: rails321
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
