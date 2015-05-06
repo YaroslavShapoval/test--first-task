@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'map#index'
-  get 'map/index'
-  get 'map/create'
+  root 'maps#index'
+  get 'maps/index'
+  get 'maps/create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
