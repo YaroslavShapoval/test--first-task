@@ -32,7 +32,7 @@ class MapTest < ActiveSupport::TestCase
   test 'map name should be unique' do
     new_map = Map.new
     new_map.name = @map.name
-    assert_not new_map.save, 'Map name should be unique'
+    assert_not new_map.save, 'Saved the map with non-uniqueness name'
   end
 
   test 'map name should be case insensitive' do
@@ -41,6 +41,6 @@ class MapTest < ActiveSupport::TestCase
     first_map.save
     second_map = Map.new
     second_map.name = first_map.name.downcase
-    assert_not second_map.save, 'Map name should be case insensitive'
+    assert_not second_map.save, 'Saved the map with non-uniqueness name in other text case'
   end
 end
