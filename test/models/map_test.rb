@@ -10,7 +10,7 @@ class MapTest < ActiveSupport::TestCase
     assert @map.save, 'Could not save valid map'
   end
 
-  test 'should not save map without map' do
+  test 'should not save map without name' do
     @map.name = ''
     assert_not @map.save, 'Saved the map without name'
   end
