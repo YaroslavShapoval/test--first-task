@@ -9,7 +9,7 @@ development:
   username: shapoval
   password: rails321
 
-test:
+test: &test
   <<: *default
   database: test_task_test
   username: shapoval
@@ -17,3 +17,6 @@ test:
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
+
+cucumber:
+  <<: *test
